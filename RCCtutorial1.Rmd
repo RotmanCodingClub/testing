@@ -1,0 +1,29 @@
+
+adsjflasdkjfas
+```{r}
+cars
+
+cars2 <- cars[1:3,]
+cars2
+
+carsnew <- cars[!duplicated(cars$speed),]
+carsnew
+
+```
+
+```{r}
+
+```
+
+
+
+
+
+carsNoDuplicateSpeeds <- cars[!duplicated(cars$speed),]
+Merge function. -
+
+carsToMerge <- cbind(carsNoDuplicateSpeeds, seq(1:length(carsNoDuplicateSpeeds$speed)))
+carsToMerge <- carsToMerge[,c(1,3)]
+cars <- cars
+
+mergedcars <- merge(x = cars, y = carsToMerge, by = "speed", all = TRUE)
